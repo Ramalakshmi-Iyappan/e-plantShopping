@@ -113,7 +113,7 @@
   .cart-item-image {
     width: 200px;
     height: 200px;
-    /* object-fit: contain; */
+    object-fit: cover;
     margin-right: 20px;
   }
   
