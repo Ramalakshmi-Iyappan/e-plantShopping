@@ -55,9 +55,11 @@ const CartItem = ({ onContinueShopping }) => {
 
   if (cartItems.length === 0) {
     return (
-      <div>
+        <div className="empty-cart">
         <h2>Your cart is empty.</h2>
-        <button onClick={handleContinueShopping}>Continue Shopping</button>
+        <button className="cart-button" onClick={handleContinueShopping}>
+          Continue Shopping
+        </button>
       </div>
     );
   }
@@ -66,7 +68,7 @@ const CartItem = ({ onContinueShopping }) => {
     <div className="cart-container">
       <h2>Shopping Cart</h2>
       <div className="cart-total" style={{ marginTop: '20px', fontWeight: 'bold' }}>
-        Total: ${calculateTotalAmount()}
+        Total cart amount: ${calculateTotalAmount()}
       </div>
       {cartItems.map((item) => (
         
@@ -96,8 +98,8 @@ const CartItem = ({ onContinueShopping }) => {
       ))}
   
       <div className="cart-actions" style={{ marginTop: '20px' }}>
-        <button onClick={handleContinueShopping}>Continue Shopping</button>
-        <button onClick={handleCheckoutShopping} style={{ marginLeft: '10px' }}>
+        <button className="cart-button" onClick={handleContinueShopping}>Continue Shopping</button>
+        <button className="cart-button" onClick={handleCheckoutShopping} style={{ marginLeft: '10px' }}>
           Checkout
         </button>
       </div>
